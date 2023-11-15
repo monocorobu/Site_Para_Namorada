@@ -1,0 +1,251 @@
+@font-face {
+  font-family: Principal;
+  src: url(../fonts/Nice\ Honey.otf);
+}
+
+@font-face {
+  font-family: secundaria;
+  src: url(../fonts/big_noodle_titling.ttf);
+}
+
+@font-face {
+  font-family: botao;
+  src: url(../fonts/Nexa-Heavy.ttf);
+}
+
+@keyframes anim-ss {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+@keyframes inicio {
+  0% {
+    top: 200%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+body,
+html {
+  all: unset;
+  padding: 0px;
+  overflow: hidden;
+}
+
+/* conteudo */
+.container-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #4895ef;
+  background-image: url(/imagens/borboletas.gif);
+  background-repeat: repeat-y;
+  background-size: 120%;
+  animation: anim-ss steps(100) 1s infinite ease;
+  height: 100vh !important ;
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #4895ef;
+  box-shadow: -5px 3px 15px #3f37c9;
+}
+
+#containerInicio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: 2s ease-out;
+  animation: inicio 1s ease;
+}
+
+.saudacao {
+  font-family: principal;
+  color: #3a0ca3;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: white;
+  font-size: 10vw;
+  padding: 0px;
+  margin: 0px;
+}
+
+.escolha {
+  font-family: secundaria;
+  color: #3a0ca3;
+  text-shadow: 1.5px 1px #b5179e;
+  font-size: 6vw;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  font-size: 4vw;
+  font-family: botao;
+  color: aliceblue;
+  padding: 2ch;
+  margin: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #480ca8;
+  border-radius: 15px;
+  width: 50%;
+
+  transition: 0.8s;
+}
+
+button:active {
+  background-color: #023047;
+
+  transition: 0.1s;
+}
+
+/* textos */
+
+#containerText {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  text-justify: left;
+  transition: 1.5s ease;
+}
+
+.texto {
+  height: auto;
+  max-width: 300px;
+
+  font-size: 4vw;
+  font-family: botao;
+  color: aliceblue;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4895ef;
+    background-image: url(/imagens/borboletas.gif);
+    background-repeat:repeat;
+    background-size: 70%;
+    background-position: center;
+    animation: anim-ss steps(300) 10s infinite ease;
+    height: 100vh !important ;
+  }
+  .fa-arrow-left{
+    cursor: pointer;
+  }
+
+  .contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #4895ef;
+    box-shadow: -5px 3px 15px #3f37c9;
+  }
+
+  #containerInicio {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 2s ease-out;
+    animation: inicio 1s ease;
+  }
+
+  .saudacao {
+    font-family: principal;
+    color: #3a0ca3;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: white;
+    font-size: calc(24px + 12 * (150vw - 100px) / 600);
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .escolha {
+    font-family: secundaria;
+    color: #3a0ca3;
+    text-shadow: 1.5px 1px #b5179e;
+    font-size: calc(24px + 7 * (100vw - 200px) / 800);
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    font-size: calc(22px + 1 * (100vw - 200px) / 600);
+    font-family: botao;
+    color: aliceblue;
+    padding: 2ch;
+    margin: 0.5rem;
+    background-color: transparent;
+    border: 1px solid #480ca8;
+    border-radius: 15px;
+    width: 50%;
+
+    transition: 0.8s;
+  }
+
+  button:active {
+    background-color: #023047;
+
+    transition: 0.1s;
+  }
+
+  #containerText {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    
+    transition: 1.5s ease;
+  }
+
+  .texto {
+    height: auto;
+    max-width: auto;
+    text-justify: left;
+    font-size: 4ch;
+    font-family: botao;
+    color: aliceblue;
+  }
+
+  .poema {
+    height: auto;
+    max-width: auto;
+
+    font-size: 2.5ch;
+    font-family: botao;
+    color: aliceblue;
+  }
+}
